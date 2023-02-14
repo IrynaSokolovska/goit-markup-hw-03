@@ -15,15 +15,72 @@ body {
    line-height: 1.5;
    font-family: 'Roboto', sans-serif;
 }
-.list {   
+
+/* components */
+
+.container {
+   
+
+   margin:0 auto;
+   width: 100%;
+   max-width:1158px;
+   outline: tomato solid 3px;
+}
+/*                                                 delite outline */
+
+/* reset */
+h1, h2, h3, h4, h5, h6, p{
+   margin: 0;
+}
+
+.list {
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
 .link {
    text-decoration: none;
+   
 }
-/* Heder */
+
+.img{
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+.address{
+   font-style: normal;
+}
+
+.button{
+   cursor: pointer;
+}
+
+/* Styles Heder */
+.page-header {
+   background-color: tomato;
+}
+/*                                             delete background*/
+
+.header-containernav {
+   display: flex;
+   padding-left: 15px;
+   padding-right: 15px;
+   
+}
+
+.page-nav {
+   display: flex;
+   align-items: center;
+}
+
 .logo {
+   margin-right: 72px;
+   margin-top: 24px;
+    margin-bottom: 24px;
+   
    color: var(--accent-color);
    font-family: 'Raleway';
    font-weight: 800;
@@ -32,33 +89,63 @@ body {
    letter-spacing: 0.03em;
    text-transform: uppercase;
 }
+
 .secondpart-logo {
    color: var(--section-title-color);
 }
-.light-logo {
-   color: var(--light-logo-color);
-   font-family: 'Raleway';
-   font-weight: 800;
-   font-size: 18px;
-   line-height: 1.17;
-   letter-spacing: 0.03em;
-   text-transform: uppercase;
+
+.nav-list{
+   display: flex;
+   align-items: center;
+   gap: 40px;
 }
 
+.nav-item {}
+
 .sitenav {
-    color: var(--section-title-color);
-    font-weight: 500;
-    letter-spacing: 0.02em;
+   margin-top: 24px;
+   margin-bottom: 24px;
+   display: inline-block;
+   
+   color: var(--section-title-color);
+   font-weight: 500;
+   letter-spacing: 0.02em;
 }
-.sitenav:hover, 
+
+.sitenav:hover,
 .sitenav:focus {
    color: var(--accent-color);
 }
+
 .sitenav.current {
    color: var(--button-nav-color);
 }
 
+.authnav-container{
+   display: flex;
+   flex-direction: row-reverse;
+}
+.authnav-item{
+   
+}
+
+.authnav-list{
+   display: flex;
+   gap: 40px;
+
+   align-items: center;
+   flex-direction:row-reverse;
+   margin-right: auto;
+
+}
+.authnav-menu{
+   display: inline-block;
+   align-items: center;
+}
+
 .authnav {
+   display: inline-block;
+   
    color: var(--primary-text-color);
    font-style: normal;
    letter-spacing: 0.02em;
@@ -72,16 +159,17 @@ body {
 
 /* Hero */
 .hero {
+   text-align: center;
    background-color: var(--section-title-color);
 }
 
 .hero-title {
-   color:var(--primary-white-color);
+   margin-top: 0;
+   margin-bottom: 48px;
+   color: var(--primary-white-color);
    font-size: 56px;
    line-height: 1.07;
-   text-align: center;
-   
-      
+         
 }
 .section-title {
    color: var(--section-title-color);
@@ -90,11 +178,23 @@ body {
     text-align: center;
     text-transform: capitalize;
    letter-spacing: 0.02em;
+   margin-top: 0;
+   margin-bottom: 72px;
 }
 .section-subtitle {
    font-weight: 500;
    font-size: 20px;
    line-height: 1.2;
+   letter-spacing: 0.02em;
+   margin-top: 0;
+   margin-bottom: 8px;
+}
+
+.discriptions {
+   margin-top: 0;
+   margin-bottom: 0;
+
+   color: var(--primary-text-color);
    letter-spacing: 0.02em;
 }
 
@@ -105,11 +205,11 @@ body {
    font-size: 16px;
    line-height: 1.5;
    letter-spacing: 0.04em;
+
    color: var(--accent-color);
    background-color: var(--light-logo-color);
    border: 1px solid #E7E9FC;
-   border-radius: 4px;
-   cursor: pointer;
+   border-radius: 4px;   
 }
 
 .button-projects:hover {
@@ -119,6 +219,11 @@ body {
 
 
 .button-hero {
+   display: inline-block;
+   padding: 16px 32px;
+   border-radius: 4px;
+   border: transparent solid 1px;
+   
    color: var(--primary-white-color);
    background-color: var(--accent-color); 
    font-family: 'Roboto', sans-serif;
@@ -126,7 +231,7 @@ body {
    font-size: 16px;
    line-height: 1.5;
    letter-spacing: 0.04em;
-   border-radius: 4px;
+   
    cursor: pointer;
 }
 
@@ -134,12 +239,6 @@ body {
 .button-hero:focus {
    background-color: var(--button-nav-color);
 }
-
-.discriptions {
-      color: var(--primary-text-color);
-      letter-spacing: 0.02em;
-}
-
 
 /* footer */
 .page-footer {
@@ -149,4 +248,13 @@ body {
 .footer-content {
    color: var(--footer-text-color);
    letter-spacing: 0.02em
+}
+.light-logo {
+   color: var(--light-logo-color);
+   font-family: 'Raleway';
+   font-weight: 800;
+   font-size: 18px;
+   line-height: 1.17;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
 }
