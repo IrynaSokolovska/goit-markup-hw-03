@@ -16,19 +16,32 @@ body {
    font-family: 'Roboto', sans-serif;
 }
 
-/* components */
+/*           components */
 
 .container {
-   
+   padding-left: 15px;
+   padding-right: 15px;
 
    margin:0 auto;
    width: 100%;
    max-width:1158px;
-   outline: tomato solid 3px;
 }
-/*                                                 delite outline */
+/*                utils */
+ .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
 
-/* reset */
+/*                reset */
 h1, h2, h3, h4, h5, h6, p{
    margin: 0;
 }
@@ -40,8 +53,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .link {
-   text-decoration: none;
-   
+   text-decoration: none;   
 }
 
 .img{
@@ -58,17 +70,12 @@ h1, h2, h3, h4, h5, h6, p{
    cursor: pointer;
 }
 
-/* Styles Heder */
-.page-header {
-   background-color: tomato;
-}
-/*                                             delete background*/
+/*             Styles Heder */
+.page-header {}
 
 .header-containernav {
    display: flex;
-   padding-left: 15px;
-   padding-right: 15px;
-   
+   align-items: center;
 }
 
 .page-nav {
@@ -79,7 +86,7 @@ h1, h2, h3, h4, h5, h6, p{
 .logo {
    margin-right: 72px;
    margin-top: 24px;
-    margin-bottom: 24px;
+   margin-bottom: 24px;
    
    color: var(--accent-color);
    font-family: 'Raleway';
@@ -121,31 +128,21 @@ h1, h2, h3, h4, h5, h6, p{
    color: var(--button-nav-color);
 }
 
-.authnav-container{
-   display: flex;
-   flex-direction: row-reverse;
-}
-.authnav-item{
-   
-}
+.authnav-item{}
 
 .authnav-list{
    display: flex;
-   gap: 40px;
-
-   align-items: center;
-   flex-direction:row-reverse;
-   margin-right: auto;
-
+   gap: 40px;   
 }
 .authnav-menu{
-   display: inline-block;
-   align-items: center;
+   margin-left: auto;
 }
 
-.authnav {
-   display: inline-block;
-   
+.authnav { 
+   display: block;
+   margin-top: 24px;
+   margin-bottom: 24px;
+
    color: var(--primary-text-color);
    font-style: normal;
    letter-spacing: 0.02em;
@@ -157,20 +154,65 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 
-/* Hero */
+/*                Hero */
 .hero {
+   padding-top: 188px;
+   padding-bottom: 188px;
    text-align: center;
+
    background-color: var(--section-title-color);
 }
 
 .hero-title {
    margin-top: 0;
    margin-bottom: 48px;
+
    color: var(--primary-white-color);
    font-size: 56px;
-   line-height: 1.07;
-         
+   line-height: 1.07;         
 }
+
+.button-hero {
+   display: inline-block;
+   padding: 16px 32px;
+   border-radius: 4px;
+   border: transparent solid 1px;
+
+   color: var(--primary-white-color);
+   background-color: var(--accent-color);
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.5;
+   letter-spacing: 0.04em;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+   background-color: var(--button-nav-color);
+}
+
+/*           Solutions  styles*/
+.section-solutions {
+   padding-top: 120px;
+   padding-bottom: 120px;
+}
+
+.solutions-container {
+   padding-left: 156px;
+   padding-right: 156px;
+}
+
+.solutions-list {
+   display: flex;
+   gap: 24px;
+}
+
+.solutions-item {
+   text-align: center;
+   flex-basis: calc((100% - 72px) / 4);
+}
+
 .section-title {
    color: var(--section-title-color);
    font-size: 36px;
@@ -198,50 +240,74 @@ h1, h2, h3, h4, h5, h6, p{
    letter-spacing: 0.02em;
 }
 
-/* button */
-.button-projects {
-   font-family: 'Roboto', sans-serif;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 1.5;
-   letter-spacing: 0.04em;
+/*         section-ourdoing styles */
 
-   color: var(--accent-color);
-   background-color: var(--light-logo-color);
-   border: 1px solid #E7E9FC;
-   border-radius: 4px;   
+.section-ourdoing {
+   display: flex;
+
 }
 
-.button-projects:hover {
-   color: var(--primary-white-color);
-   background-color: var(--button-nav-color);
+.ourdoing-container {
+   display: flex;
+   flex-direction: column;
 }
 
-
-.button-hero {
-   display: inline-block;
-   padding: 16px 32px;
-   border-radius: 4px;
-   border: transparent solid 1px;
-   
-   color: var(--primary-white-color);
-   background-color: var(--accent-color); 
-   font-family: 'Roboto', sans-serif;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 1.5;
-   letter-spacing: 0.04em;
-   
-   cursor: pointer;
+.image-container{
+   display: flex;
 }
 
-.button-hero:hover,
-.button-hero:focus {
-   background-color: var(--button-nav-color);
+.ourdoing-list {
+   display: flex;
+   gap: 24px;
 }
 
-/* footer */
+.ourdoing-item {
+   text-align: center;
+   flex-basis: calc((100% - 48px) / 3);
+}
+
+/*       Section Our Team styles */
+.section-team {
+   display: flex;
+}
+
+.team-container {
+   display: flex;
+   flex-direction: column;
+}
+
+.image-team-container{
+    display: flex;
+}
+
+.section-title {}
+
+.team-list {
+   display: flex;
+   gap: 24px;
+}
+
+.team-item {
+   text-align: center;
+   flex-basis: calc((100% - 72px) / 4);
+}
+
+.section-subtitle {}
+
+.discriptions {}
+
+/*                  footer */
+.footer-container {}
+
+.foter-text-container {
+   display: block;
+   width: 264px;
+}
+
 .page-footer {
+   padding-top: 100px;
+   padding-bottom: 100px;
+   padding-right: 1020px;
    background-color: var(--section-title-color);
 }
 
@@ -249,7 +315,9 @@ h1, h2, h3, h4, h5, h6, p{
    color: var(--footer-text-color);
    letter-spacing: 0.02em
 }
+
 .light-logo {
+   margin-bottom: 16px;
    color: var(--light-logo-color);
    font-family: 'Raleway';
    font-weight: 800;
@@ -258,3 +326,61 @@ h1, h2, h3, h4, h5, h6, p{
    letter-spacing: 0.03em;
    text-transform: uppercase;
 }
+/*                 portfolio styles */
+
+.section-projects {}
+
+.projects-container {
+   display: flex;
+   justify-content: center;
+      
+}
+
+.projects-list {
+   display: flex;
+   padding-top: 96px;
+   padding-bottom: 72px;
+   gap: 24px;
+}
+
+.projects-item {
+   display: flex;
+   
+}
+
+.button-projects {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+
+      color: var(--accent-color);
+      background-color: var(--light-logo-color);
+      border: 1px solid #E7E9FC;
+      border-radius: 4px;
+   }
+.button-projects:hover {
+   color: var(--primary-white-color);
+   background-color: var(--button-nav-color);
+}
+
+.foto-container {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 48px;
+}
+
+.foto-list {
+   display: flex;
+   gap: 24px;
+}
+
+.foto-item {text-align: center;
+   flex-basis: calc((100% - 96px) / 5);}
+
+.section-subtitle {}
+
+.discriptions {}
+
+
