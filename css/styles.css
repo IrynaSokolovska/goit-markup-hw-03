@@ -21,9 +21,13 @@ body {
 .container {
    padding-left: 15px;
    padding-right: 15px;
+   
+   background-color: tomato;
+   margin-left: auto;
+   margin-right: auto;
 
-   margin:0 auto;
-   width: 100%;
+   
+   width: 1158px;
    max-width:1158px;
 }
 /*                utils */
@@ -71,7 +75,10 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /*             Styles Heder */
-.page-header {}
+.page-header {
+   border-bottom: 1px solid var(--footer-text-color);
+   background-color: var(--primary-white-color);
+}
 
 .header-containernav {
    display: flex;
@@ -84,10 +91,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .logo {
-   margin-right: 72px;
-   margin-top: 24px;
-   margin-bottom: 24px;
-   
+   margin-right: 72px;     
    color: var(--accent-color);
    font-family: 'Raleway';
    font-weight: 800;
@@ -110,8 +114,8 @@ h1, h2, h3, h4, h5, h6, p{
 .nav-item {}
 
 .sitenav {
-   margin-top: 24px;
-   margin-bottom: 24px;
+   padding-top: 24px;
+   padding-bottom: 24px;
    display: inline-block;
    
    color: var(--section-title-color);
@@ -140,9 +144,8 @@ h1, h2, h3, h4, h5, h6, p{
 
 .authnav { 
    display: block;
-   margin-top: 24px;
-   margin-bottom: 24px;
-
+   padding-top: 24px;
+   padding-bottom: 24px;
    color: var(--primary-text-color);
    font-style: normal;
    letter-spacing: 0.02em;
@@ -166,6 +169,9 @@ h1, h2, h3, h4, h5, h6, p{
 .hero-title {
    margin-top: 0;
    margin-bottom: 48px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 500px;
 
    color: var(--primary-white-color);
    font-size: 56px;
@@ -193,15 +199,12 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /*           Solutions  styles*/
-.section-solutions {
+.solutions {
    padding-top: 120px;
    padding-bottom: 120px;
 }
 
-.solutions-container {
-   padding-left: 156px;
-   padding-right: 156px;
-}
+.solutions-container {}
 
 .solutions-list {
    display: flex;
@@ -209,7 +212,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .solutions-item {
-   text-align: center;
    flex-basis: calc((100% - 72px) / 4);
 }
 
@@ -242,18 +244,16 @@ h1, h2, h3, h4, h5, h6, p{
 
 /*         section-ourdoing styles */
 
-.section-ourdoing {
-   display: flex;
-
+.ourdoing {
+   padding-bottom: 120px;
 }
 
-.ourdoing-container {
-   display: flex;
-   flex-direction: column;
-}
+.ourdoing-container {}
 
-.image-container{
-   display: flex;
+.ourdoing-picture {
+   display: block;
+   max-width: 100%;
+   height: auto;
 }
 
 .ourdoing-list {
@@ -267,18 +267,12 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /*       Section Our Team styles */
-.section-team {
-   display: flex;
+.team {
+   padding-top: 120px;
+   padding-bottom: 120px;
 }
 
-.team-container {
-   display: flex;
-   flex-direction: column;
-}
-
-.image-team-container{
-    display: flex;
-}
+.team-container {}
 
 .section-title {}
 
@@ -288,10 +282,16 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .team-item {
+   padding-bottom: 32px;
    text-align: center;
    flex-basis: calc((100% - 72px) / 4);
+   background-color: var(--primary-white-color);
+      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+      border-radius: 0px 0px 4px 4px;
 }
-
+.team-pectures{
+   margin-bottom: 32px;
+}
 .section-subtitle {}
 
 .discriptions {}
@@ -299,15 +299,15 @@ h1, h2, h3, h4, h5, h6, p{
 /*                  footer */
 .footer-container {}
 
-.foter-text-container {
-   display: block;
+.footer-text-container {
    width: 264px;
+   height: 72px;
 }
 
 .page-footer {
    padding-top: 100px;
    padding-bottom: 100px;
-   padding-right: 1020px;
+   
    background-color: var(--section-title-color);
 }
 
@@ -328,24 +328,27 @@ h1, h2, h3, h4, h5, h6, p{
 }
 /*                 portfolio styles */
 
-.section-projects {}
-
-.projects-container {
-   display: flex;
-   justify-content: center;
-      
+.projects {
+   padding-top: 96px;
+   padding-bottom: 120px;
 }
+
+.projects-container {}
 
 .projects-list {
    display: flex;
-   padding-top: 96px;
-   padding-bottom: 72px;
-   gap: 24px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+      gap: 24px;
+   
+   
+   
 }
 
 .projects-item {
-   display: flex;
-   
+
 }
 
 .button-projects {
@@ -355,11 +358,14 @@ h1, h2, h3, h4, h5, h6, p{
       line-height: 1.5;
       letter-spacing: 0.04em;
 
+      padding: 12px 24px;
+
       color: var(--accent-color);
       background-color: var(--light-logo-color);
       border: 1px solid #E7E9FC;
       border-radius: 4px;
    }
+
 .button-projects:hover {
    color: var(--primary-white-color);
    background-color: var(--button-nav-color);
@@ -373,11 +379,22 @@ h1, h2, h3, h4, h5, h6, p{
 
 .foto-list {
    display: flex;
-   gap: 24px;
+   flex-wrap: wrap;
+}
+   
+
+.foto-item{
+   margin-right: 24px;
+   margin-bottom: 48px;
+   }
+
+.foto-item:nth-child(3n) {
+  margin-right: 0;
 }
 
-.foto-item {text-align: center;
-   flex-basis: calc((100% - 96px) / 5);}
+.foto-item:nth-last-child(3n) {
+margin-bottom: 0;
+}
 
 .section-subtitle {}
 
